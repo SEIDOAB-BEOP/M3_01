@@ -15,7 +15,10 @@ namespace BOOPM3_01_07
             }
             public long Area2() => Width * Height;
 
-            public static long Area(long Width, long Height) => Width * Height;
+            public static long Area(long Width, long Height)
+            {
+                return Width * Height;
+            }
         }
         static void Main(string[] args)
         {
