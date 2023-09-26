@@ -21,8 +21,14 @@ namespace BOOPM3_01_06
 
 			public decimal Worth
 			{
-				get => _currentPrice * SharesOwned;
-				init => SharesOwned = value / _currentPrice;  // Can only be set at initialization time
+				get
+				{
+					return _currentPrice * SharesOwned;
+				}
+				init
+				{
+					SharesOwned = value / _currentPrice;
+				}// Can only be set at initialization time
 			}
 		}
 		static void Main(string[] args)
