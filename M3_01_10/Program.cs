@@ -20,21 +20,27 @@ namespace BOOPM3_01_10
             public decimal Price { get; set; } = default;
             public int Year { get; set; } = default;
 
-            public WineClass(decimal price)
+            public WineClass()
+            {
+                Price = 10000;
+            }
+
+            public WineClass(decimal price):this()
             {
                 Price = price;
             }
 
-            public WineClass(decimal price, int year) : this(price)
+            public WineClass(decimal price, int year) : this (price)
             { 
-                Year = year; 
+                Year = year;
             }
         }
         static void Main(string[] args)
         {
             var ws1 = new WineStruct(78);
             var ws2 = new WineStruct(78, 2001);
-  
+
+            var wc0 = new WineClass();
             var wc1 = new WineClass(78);
             var wc2 = new WineClass(78, 2001);
 

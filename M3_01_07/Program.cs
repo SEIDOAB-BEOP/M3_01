@@ -13,11 +13,28 @@ namespace BOOPM3_01_07
             {
                 return Width * Height;
             }
-            public long Area2() => Width * Height;
+            public long Area2() => Rectangle.Area(Width, Height);
 
+            /// <summary>
+            /// Calculates the area of a rectangle. I.e. Width not equal Height
+            /// </summary>
+            /// <param name="Width"></param>
+            /// <param name="Height"></param>
+            /// <returns></returns>
             public static long Area(long Width, long Height)
             {
                 return Width * Height;
+            }
+
+
+            /// <summary>
+            /// Calculates the area of a square
+            /// </summary>
+            /// <param name="Side">the side of a square</param>
+            /// <returns>Area</returns>
+            public static long Area(long Side)
+            {
+                return Side * Side;
             }
         }
         static void Main(string[] args)
@@ -30,6 +47,8 @@ namespace BOOPM3_01_07
 
 
             Console.WriteLine(Rectangle.Area(300, 100)); //30000
+            Console.WriteLine(Rectangle.Area(300)); //90000
+
         }
     }
  }
